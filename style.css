@@ -1,0 +1,151 @@
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+:root{
+    /* colors */
+--clr-primary:hsl(158, 36%, 37%);
+--clr-secondary:hsl(30, 38%, 92%);
+--clr-neutral-900: hsl(212, 21%, 14%);
+--clr-neutral-500: hsl(228, 12%, 48%);
+--clr-neutral-100: hsl(0, 0%, 100%);
+
+/* font size */
+--fs-normal:14px;
+
+/* font family */
+--ff-first: 'Montserrat', sans-serif;
+--ff-second: 'Fraunces', serif;
+
+/* font weights */
+--fw-medium:500;
+--fw-bold:700;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
+  * {
+    margin: 0;
+  }
+ 
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body{
+display: flex;
+flex-direction: column;
+font-size: var(--fs-normal);
+background-color: var(--clr-secondary);
+align-items: center;
+justify-content: center;
+
+  }
+.product{
+display: flex;
+flex-direction: column;
+padding: 1.5rem 1rem;
+border-radius: 1rem;
+
+max-width: 600px;
+
+}
+
+.info{
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+background-color: var(--clr-neutral-100);
+color: var(--clr-neutral-500);
+
+padding: 1.5rem 1rem;
+}
+
+.label{
+font-family: var(--ff-first);
+text-transform: uppercase;
+letter-spacing: 5px;
+}
+
+.title{
+color: var(--clr-neutral-900);
+font-family: var(--ff-second);
+line-height: 1;
+font-size: 2rem;
+}
+
+.desc{
+font-family: var(--ff-first);
+line-height: 2;
+}
+
+.price{
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.price-new{
+font-family: var(--ff-second);
+color: var(--clr-primary);
+font-size: 2rem;
+font-weight: var(--fw-bold);
+}
+
+.price-old{
+text-decoration: line-through ;
+}
+
+.button{
+background-color: var(--clr-primary);
+color: var(--clr-neutral-100);
+border: 0;
+border-radius: 0.5rem;
+font-family: var(--ff-first);
+display: flex;
+justify-content: center;
+gap: 0.5rem;
+padding: 1rem ;
+}
+
+
+
+@media (min-width:600px) {
+  .product{
+flex-direction: row;
+
+  }
+  .img, .info{
+width: 50%;
+height: 100%;
+  }
+
+  .info{
+    padding: 1rem;
+   gap: 1rem;
+  }
+}
